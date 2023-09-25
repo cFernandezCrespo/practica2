@@ -14,16 +14,22 @@ docker images
 <br/>
 
 Mapea el puerto 80 del contenedor con el puerto 8000 de tu máquina.
-Utiliza bind mount para que el directorio del apache2 'htdocs' este montado un directorio que tu elijas.
 <br/>
 Utiliza -v "$PWD"/htdocs:/usr/local/apache2/htdocs/
 <br/>
 ~~~
-docker run -dit --name my-apache-app -p 8000:80 -v "$PWD":/home/asir2/SRI/apache/htdocs httpd:2.4
+docker run -dit --name my-apache-app -p 8000:80 -v "$PWD"/htdocs:/usr/local/apache2/htdocs  httpd:2.4
+~~~
+Utiliza bind mount para que el directorio del apache2 'htdocs' este montado un directorio que tu elijas.
+<br/>
+~~~
+docker run -dit --name my-apache-app -p 8000:80 -v "$PWD"/htdocs:/usr/local/apache2/htdocs  httpd:2.4
 ~~~
 Realiza un 'hola mundo' en html y comprueba que accedes desde el navegador.
 <br/>
-    Crea un volumen para este mismo fin.
+Creamos un index.html en la carpeta que dirigimos antes el apache
+<br/>
+Crea un volumen para este mismo fin.
 <br/>
 Crea un contenedor 'asir_web1' que use este volumen para el 'htdocs'
 <br/>

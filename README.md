@@ -37,8 +37,6 @@ Crea un contenedor 'asir_web1' que use este mismo directorio para 'htdocs' y el 
 docker run -dit --name asir_web1 -p 8000:80 -v "$PWD"/htdocs:/usr/local/apache2/htdocs  httpd:2.4
 ~~~
 <br/>
-Crea un contenedor 'asir_web1' que use este volumen para el 'htdocs'
-<br/>
 Utiliza Code para hacer un hola mundo en html
 <br/>
 Crea otro contenedor 'asir_web2' con el mismo volumen y a otro puerto, por ejemplo 9080.

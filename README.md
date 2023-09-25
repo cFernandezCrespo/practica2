@@ -39,11 +39,22 @@ docker run -dit --name asir_web1 -p 8000:80 -v "$PWD"/htdocs:/usr/local/apache2/
 <br/>
 Utiliza Code para hacer un hola mundo en html
 <br/>
+<br/>
+entras en el html e introduces la información que necesites haciendo un html formateado de forma correcta.
+<br/>
+<br/>
 Crea otro contenedor 'asir_web2' con el mismo volumen y a otro puerto, por ejemplo 9080.
 <br/>
+
+~~~
+docker run -dit --name asir_web2 -p 9080:80 -v "$PWD"/htdocs:/usr/local/apache2/htdocs  httpd:2.4  
+~~~
+
+
 Comprueba que los dos servidores 'sirven' la misma página, es decir, cuando consultamos en el navegador:
 <br/>
 http://localhost:9080 
 http://localhost:8000
 <br/>
 Tienen que salir la misma página web
+! (/home/asir2/Imágenes/8000.png)

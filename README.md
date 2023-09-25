@@ -57,4 +57,6 @@ http://localhost:9080
 http://localhost:8000
 <br/>
 Tienen que salir la misma página web
-! (/home/asir2/Imágenes/8000.png)
+
+![ puerto 8000 ](./imagenes/8000.png)
+![ puerto 9080 ](./imagenes/9080.png)
